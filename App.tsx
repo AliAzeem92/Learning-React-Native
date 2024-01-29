@@ -1,17 +1,24 @@
 import React from 'react';
 import {Text, StyleSheet, View, Button} from 'react-native';
 
-let name = 'Ali Azeem';
-var age = '19';
-const rollNum = 'BSCS';
-
 const App = () => {
   return (
     <View>
-      <Text style={{fontSize: 50, color: 'purple'}}>Hello World</Text>
-      <Text style={{fontSize: 40, color: 'Red'}}> {name} </Text>
-      <Text style={{fontSize: 30, color: 'Blue'}}> {age} </Text>
-      <Text style={{fontSize: 20, color: 'black'}}> {rollNum} </Text>
+      <Text style={{fontSize: 50, color: 'blue'}}>Components</Text>
+      <UserData />
+      <UserData />
+      <UserData />
+      <UserData />
+    </View>
+  );
+};
+
+const UserData = () => {
+  return (
+    <View>
+      <Text style={{fontSize: 30, color: 'red'}}>Name: Ali Azeem</Text>
+      <Text style={{fontSize: 30, color: 'red'}}>Age: 19</Text>
+      <Text style={{fontSize: 30, color: 'red'}}>Class: BSCS</Text>
     </View>
   );
 };
