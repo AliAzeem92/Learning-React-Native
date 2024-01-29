@@ -1,14 +1,13 @@
 import React from 'react';
 import {Text, StyleSheet, View, Button} from 'react-native';
+import ClassData from './components/ClassData';
 
 const App = () => {
   return (
     <View>
       <Text style={{fontSize: 50, color: 'blue'}}>Components</Text>
       <UserData />
-      <UserData />
-      <UserData />
-      <UserData />
+      <ClassData />
     </View>
   );
 };
