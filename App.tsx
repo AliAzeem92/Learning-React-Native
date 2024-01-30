@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Text, View, StyleSheet} from 'react-native';
+import EXStyle from './globleCSS';
 
 const App = () => {
   return (
@@ -13,12 +14,13 @@ const App = () => {
         }}>
         Styling
       </Text>
-      <Text style={style.textBox}>External CSS</Text>
-      <Text style={style.textBox}>External CSS</Text>
-      <Text style={style.textBox}>External CSS</Text>
-      <Text style={style.textBox}>External CSS</Text>
-      <Text style={style.textBox}>External CSS</Text>
-      <Text style={style.textBox}>External CSS</Text>
+      <Text style={style.textBox}>Internal CSS</Text>
+      <Text style={style.textBox}>Internal CSS</Text>
+      <Text style={style.textBox}>Internal CSS</Text>
+      {/* Externel CSS */}
+      <Text style={EXStyle.textBox}>External CSS</Text>
+      <Text style={EXStyle.textBox}>External CSS</Text>
+      <Text style={EXStyle.textBox}>External CSS</Text>
     </View>
   );
 };
