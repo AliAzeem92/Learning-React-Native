@@ -1,24 +1,23 @@
 import React from 'react';
-import {Text, StyleSheet, View, Button} from 'react-native';
-import ClassData from './components/ClassData';
+import {Button, Text, View} from 'react-native';
 
 const App = () => {
-  return (
-    <View>
-      <Text style={{fontSize: 50, color: 'blue'}}>Components</Text>
-      <UserData />
-      <ClassData />
-    </View>
-  );
-};
+  const fruit = (value: any) => {
+    console.warn(value);
+  };
 
-const UserData = () => {
   return (
     <View>
-      <ClassData />
-      <Text style={{fontSize: 30, color: 'red'}}>Name: Ali Azeem</Text>
-      <Text style={{fontSize: 30, color: 'red'}}>Age: 19</Text>
-      <Text style={{fontSize: 30, color: 'red'}}>Class: BSCS</Text>
+      <Text style={{fontSize: 50, color: 'blue'}}>Buttons</Text>
+      {/* With Params */}
+      <Button
+        title="On Press"
+        color={'lightgreen'}
+        onPress={() => fruit('Hello')}
+      />
+      <Text></Text>
+      {/* Without Params */}
+      <Button title="On Press 2" color={'green'} onPress={fruit} />
     </View>
   );
 };
