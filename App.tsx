@@ -2,42 +2,36 @@
 // import {Button, Text, View} from 'react-native';
 
 // const App = () => {
-//   const [first, second] = useState('Ali');
-
-//   function sec() {
-//     second('Azeem');
-//   }
-
 //   return (
 //     <View>
-//       <Text style={{fontSize: 50, color: 'blue', textAlign: 'center'}}>
-//         State
+//       <Text
+//         style={{
+//           fontSize: 50,
+//           backgroundColor: 'pink',
+//           color: 'blue',
+//           textAlign: 'center',
+//         }}>
+//         Props
 //       </Text>
-//       <Text style={{fontSize: 30, color: 'red'}}>{first} </Text>
-//       <Button title="Second Name" onPress={sec} />
+//       <userName />
 //     </View>
 //   );
-// };
 
-// export default App;
-// import React, {useState} from 'react';
-// import {Button, Text, View} from 'react-native';
-
-// const App = () => {
-//   const [father, son] = useState('Aamir');
-//   function ofspring() {
-//     son('Ali');
-//   }
-
-//   return (
-//     <View>
-//       <Text style={{fontSize: 50, color: 'blue', textAlign: 'center'}}>
-//         State
-//       </Text>
-//       <Text style={{fontSize: 30, color: 'red'}}>{father}</Text>
-//       <Button title="Change Name" onPress={ofspring} />
-//     </View>
-//   );
+//   const userName = () => {
+//     return (
+//       <View>
+//         <Text
+//           style={{
+//             fontSize: 50,
+//             backgroundColor: 'pink',
+//             color: 'blue',
+//             textAlign: 'center',
+//           }}>
+//           Props
+//         </Text>
+//       </View>
+//     );
+//   };
 // };
 
 // export default App;
@@ -46,18 +40,34 @@ import React, {useState} from 'react';
 import {Button, Text, View} from 'react-native';
 
 const App = () => {
-  const [city1, city2] = useState('Karachi');
-  function second() {
-    city2('Islamabad');
-  }
+  const [fatherName, sonName] = useState('Aamir Azeem');
 
   return (
     <View>
-      <Text style={{fontSize: 50, color: 'blue', textAlign: 'center'}}>
-        State
+      <Text
+        style={{
+          fontSize: 50,
+          backgroundColor: 'pink',
+          color: 'blue',
+          textAlign: 'center',
+        }}>
+        Props
       </Text>
-      <Text style={{fontSize: 30, color: 'gold'}}>{city1}</Text>
-      <Button title="Second City" onPress={second} />
+      <UserName name={fatherName} />
+      <Button title="Child Name" onPress={() => sonName('Ali Azeem')} />
+    </View>
+  );
+};
+const UserName = (props: any) => {
+  return (
+    <View>
+      <Text
+        style={{
+          fontSize: 30,
+          color: 'red',
+        }}>
+        {props.name}
+      </Text>
     </View>
   );
 };
