@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const EXStyle = StyleSheet.create({
-  textBox: {
+  text: {
     fontSize: 30,
     color: 'gold',
     backgroundColor: 'blue',
