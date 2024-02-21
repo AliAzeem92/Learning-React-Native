@@ -3,16 +3,15 @@ import {Button, Text, View} from 'react-native';
 import EXStyle from '../globleCSS';
 
 export default function TextBox() {
-  const [firstName, secondName] = useState('Hello there...');
-  function name() {
-    secondName('My Name is Ali Azeem');
+  const [firstValue, seconeValue] = useState('Hello There......');
+  function name () {
+    seconeValue('My name is Ali Azeem')
   }
 
   return (
     <View>
-      <Text></Text>
-      <Button title="Click Me" onPress={name} />
-      <Text style={EXStyle.text}>{firstName}</Text>
+      <Text style={EXStyle.text} >{firstValue} </Text>
+      <Button title='Click Me' onPress={name} />
     </View>
   );
 }
