@@ -65,11 +65,13 @@ const App = () => {
   return (
     <View>
       <Header />
-      <Text style={styles.heading}>List</Text>
+      <Text style={styles.heading}>Grid</Text>
       <ScrollView style={{marginBottom: 250}}>
-        {users.map(item => (
-          <Text style={styles.items}>{item.name}</Text>
-        ))}
+        <View style={{flex: 1, flexDirection: 'row', flexWrap: 'wrap'}}>
+          {users.map(item => (
+            <Text style={styles.items}>{item.name}</Text>
+          ))}
+        </View>
       </ScrollView>
     </View>
   );
@@ -85,10 +87,13 @@ const styles = StyleSheet.create({
     fontSize: 35,
     margin: 15,
     textAlign: 'center',
+    textAlignVertical: 'center',
     backgroundColor: 'pink',
     borderWidth: 5,
     borderColor: 'red',
     color: 'white',
+    height: 150,
+    width: 150,
   },
 });
 
